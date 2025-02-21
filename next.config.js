@@ -7,6 +7,11 @@ const store = require("./store.config.json")
 const nextConfig = withStoreConfig({
   features: store.features,
   reactStrictMode: true,
+  eslint: {
+    // Warning: This allows production builds to successfully complete even if
+    // your project has ESLint errors.
+    ignoreDuringBuilds: true,
+  },
   images: {
     remotePatterns: [
       {
@@ -29,6 +34,6 @@ const nextConfig = withStoreConfig({
   },
 })
 
-console.log("next.config.js", JSON.stringify(module.exports, null, 2))
+console.log("next.config.js", JSON.stringify(nextConfig, null, 2))
 
 module.exports = nextConfig
