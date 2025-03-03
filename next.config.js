@@ -1,4 +1,6 @@
+// eslint-disable-next-line @typescript-eslint/no-require-imports
 const { withStoreConfig } = require("./store-config")
+// eslint-disable-next-line @typescript-eslint/no-require-imports
 const store = require("./store.config.json")
 
 /**

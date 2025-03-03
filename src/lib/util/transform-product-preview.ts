@@ -12,7 +12,8 @@ const transformProductPreview = (
 ): ProductPreviewType => {
   const variants = product.variants as unknown as CalculatedVariant[]
 
-  let cheapestVariant = undefined
+  // eslint-disable-next-line
+  let cheapestVariant: any = undefined
 
   if (variants?.length > 0) {
     cheapestVariant = variants.reduce((acc, curr) => {

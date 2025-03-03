@@ -2,6 +2,7 @@
 
 import { clx } from "@medusajs/ui"
 import { usePathname, useRouter, useSearchParams } from "next/navigation"
+import { ReactElement } from "react"
 
 export function Pagination({
   page,
@@ -57,7 +58,7 @@ export function Pagination({
 
   // Function to render page buttons based on the current page and total pages
   const renderPageButtons = () => {
-    const buttons = []
+    const buttons: ReactElement[] = []
 
     if (totalPages <= 7) {
       // Show all pages
